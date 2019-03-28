@@ -1,0 +1,87 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>器官捐贈</title>
+    <!--9~10為日期選擇準備的-->
+        <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+    <script src="//apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="jqueryui/style.css">
+    <script>
+        $(function () {//日期
+            $("#datepicker").datepicker();
+        });
+
+    </script>
+</head>
+   
+<body background="https://data.photo-ac.com/data/thumbnails/f3/f35ff203cbba7cd37e8d2aacf69d3d23_t.jpeg" bgcolor="white" text="white" link="white">
+    <form id="form1" runat="server">
+    <h2>器官捐贈同意書</h2>
+        <pre size="5">          本人瞭解醫療有其極限,而愛心可以延續，經閱讀、知悉後列說明後，願意簽署器官捐贈同意書，並將此意願註記於健保卡，於生命之盡頭，捐贈可用器官，
+          讓其他需要的病人能因此而獲得重生機會。（以下欄位有＊標示者為必填）</pre>
+        <pre size="5">          簽署人:<asp:TextBox ID="TextBox1" runat="server" BackColor="White" BorderStyle="None" Height="16px" Width="364px"></asp:TextBox><img src ="http://5b0988e595225.cdn.sohucs.com/images/20171213/8bc881d51867461da9edefe19128b950.jpeg" align ="right" style="height: 271px; margin-left: 0px">     出生日期民國<asp:TextBox ID="datepicker" runat="server" BorderStyle="None"></asp:TextBox></pre>
+        <pre size="5">          國民身分證統一編號:<asp:TextBox ID="TextBox12" runat="server" BackColor="White" BorderStyle="None" Height="16px" Width="280px"></asp:TextBox></pre>
+        <pre size="5">          聯絡電話:<asp:TextBox ID="TextBox13" runat="server" BackColor="White" BorderStyle="None" Height="16px" Width="349px"></asp:TextBox></pre>
+        <pre size="5">          聯絡地址:<asp:TextBox ID="TextBox14" runat="server" BackColor="White" BorderStyle="None" Height="16px" Width="349px"></asp:TextBox></pre>
+        <pre size="5">          簽署人未滿 20 歲，方須由法定代理人正楷書寫</pre>
+        <pre size="5">          法定代理人姓名:<asp:TextBox ID="TextBox15" runat="server" BackColor="White" BorderStyle="None" Height="16px" Width="152px"></asp:TextBox> 法定代理人國民身分證統一編號:<asp:TextBox ID="TextBox16" runat="server" BackColor="White" BorderStyle="None" Height="16px" Width="224px" ></asp:TextBox></pre>
+        <pre size="5">          本人 □希望 □不希望 獲得器官捐贈同意卡。（如未勾選，視同「不希望」）</pre>
+        <pre size="5">          卡號(工作人員填寫): <asp:TextBox ID="TextBox17" runat="server"  BackColor="White" BorderStyle="None" Height="16px" Width="553px"></asp:TextBox></pre>
+        <pre size="5">          簽署的原因：<asp:TextBox ID="TextBox18" runat="server" BackColor="White" BorderStyle="None" Height="16px" Width="609px"></asp:TextBox>	</pre>
+        <pre size="5">          給家人的話： <asp:TextBox ID="TextBox19" runat="server" BackColor="White" BorderStyle="None" Height="16px" Width="604px"></asp:TextBox></pre>
+        <pre size="5">          願意捐贈器官／組織項目(可複選)   <asp:CheckBox ID="CheckBox5" runat="server"></asp:CheckBox>全部捐贈<asp:CheckBox ID="CheckBox14" runat="server"></asp:CheckBox>心臟<asp:CheckBox ID="CheckBox15" runat="server"></asp:CheckBox>肺臟<asp:CheckBox ID="CheckBox16" runat="server"></asp:CheckBox>肝臟<asp:CheckBox ID="CheckBox17" runat="server"></asp:CheckBox>胰臟<asp:CheckBox ID="CheckBox18" runat="server"></asp:CheckBox>腎臟<asp:CheckBox ID="CheckBox19" runat="server"></asp:CheckBox>小腸<asp:CheckBox ID="CheckBox20" runat="server"></asp:CheckBox>眼角膜<asp:CheckBox ID="CheckBox21" runat="server"></asp:CheckBox>皮膚<asp:CheckBox ID="CheckBox22" runat="server"></asp:CheckBox>骨骼<asp:CheckBox ID="CheckBox23" runat="server"></asp:CheckBox>心瓣膜<asp:CheckBox ID="CheckBox24" runat="server"></asp:CheckBox>血管                     性別:<asp:DropDownList ID="DropDownList2" runat="server" Height="16px" Width="68px"><asp:ListItem Selected="True" Value="1">-</asp:ListItem><asp:ListItem Value="2">女</asp:ListItem><asp:ListItem Value="3">男</asp:ListItem></asp:DropDownList></pre>
+        ----------------------------------------------------------------------------------------------------------------------------------------------------------  
+        <pre size="5">說明事項：
+          一、依人體器官移植條例之規定，器官捐贈必須為無償之行為，且器官之摘取，應於病人之診治醫師                                 
+          判定死亡後為之（含腦死判定）。如病人為非病死或疑似為非病死者，必須於依法相驗完畢後，
+          且經檢察官認無繼續勘驗之必要後，才能施行。
+          二、依人體器官移植條例第六條之規定，醫師自往生者遺體摘取器官以供移植，須符合下列規定之一：
+          （一）往生者生前以書面（如本同意書）或遺囑同意。
+          （二）往生者最近親屬以書面同意。
+          三、您簽署的器官捐贈同意書，將依人體器官移植條例第六條規定，加註於健保卡並掃描存檔於「衛
+          生福利部安寧療護及器官捐贈意願資訊系統」；如醫院、醫師遇有病人經診斷其病情於近期內進
+          行至死亡已不可避免，且該病人無法清楚表達意識之情況下，將以此作為決定器官捐贈之依循，
+          並可讓家屬充分瞭解病人生前之意願。醫院、醫師絕不會因知悉此捐贈意願而不施予必要治療。
+          四、捐贈者如患無法控制的感染性疾病，如後天免疫缺乏症候群（Acquired lmmunodeficiency
+          Syndrome，AIDS；俗名「愛滋病」）、庫賈氏病（Creutzfeldt-Jakob Disease，CJD）…等等，為
+          避免因器官移植而傳染給受贈者，醫院、醫師得不接受病人之器官捐贈。
+          五、您所表達之器官捐贈意願，可隨時查詢或撤回。查詢電話：02-23582186
+          *表單來源：依財團法人器官捐贈移植登錄中心公告之參考範例編印
+          *本資料僅供器官捐贈同意書意願表達使用，將依個人資料保護法，善盡保密之責任。
+          *一式二聯：正本聯寄「行政院衛生福利部安寧療護及器官捐贈意願資料處理小組」(10050 台北市中正區杭州南
+          路 1 段 15-1 號 11 樓)，副本聯由立意願書人自存
+         <!--老師要求的button處理-->                                                                          <!--type定義button-->                                                                            <!--工具箱拿出來的button-->
+         <button onclick= "aaa()" style="width:120px;height:40px;border:2px blue none;">資料檢查</button>     <input type="button" value="loadPatient" onclick= "B1()"   style="width:120px;height:40px;border:2px blue none;">     <button onclick= "C1()" style="width:120px;height:40px;border:2px blue none;">getPatient</button>    
+
+    </form>
+     <script>
+         function aaa() {
+             var a = document.getElementById("TextBox1");//獲得需要警示的textbox
+             var b = document.getElementById("TextBox13");//獲得需要警示的textbox(電話)
+             if (!document.getElementById("TextBox1").value)//判斷有沒有字
+                 a.setCustomValidity("簽署人必須填");//警示文字
+             if (!document.getElementById("TextBox13").value)
+                 b.setCustomValidity("電話必須填");
+             else if (isNaN(document.getElementById("TextBox13").value))
+                 b.setCustomValidity("電話必须是数字");
+         }
+
+         function B1() {
+             document.getElementById("TextBox1").value = "Chalmers";
+             document.getElementById("TextBox13").value = "12345678";
+             document.getElementById("datepicker").value = "1974/12/25";
+             document.getElementById("DropDownList2").value = "3";
+         }
+
+         function C1() {
+             alert(A = document.getElementById("TextBox1").value + "\n" + (B = document.getElementById("TextBox13").value) + "\n" + document.getElementById("datepicker").value);
+
+         }
+     </script>
+</body>
+</html>
